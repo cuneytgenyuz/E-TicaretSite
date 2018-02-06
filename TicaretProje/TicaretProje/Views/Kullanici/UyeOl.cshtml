@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<script src="~/Content/js/deneme.js"></script>
+<link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/css/deneme.css" rel="stylesheet" />
+
+<script>
+    function deneme() {
+        window.alert("Giriş Yapıldı");
+    }
+</script>
+
+<br /><br /><br /><br /><br />
+
+    <div class="container" align="center">
+        <div align="center">
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-4">
+                <div class="panel panel-default" align="center">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Üye Kayıt Ekranı</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" action="/Kullanici/UyeOl" method="post">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="adi" id="first_name" class="form-control input-sm floatlabel" placeholder="Adı" maxlength="30">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="soyadi" id="last_name" class="form-control input-sm" placeholder="Soyadı" maxlength="30">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="kullaniciAdi" id="last_name" class="form-control input-sm" placeholder="Kullanıcı Adı" maxlength="15">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" name="parola" id="password" class="form-control input-sm" placeholder="Şifre">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="mail" id="email" class="form-control input-sm" placeholder="E-mail Adres">
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <span> Doğum Tarihi <input type="date" name="dogumTarihi" id="last_name" class="form-control input-sm"></span>
+                                </div>
+                            </div>
+
+                            <input type="submit" value="Kayıt Ol" class="btn btn-info btn-block" onclick="deneme()">
+
+                          
+
+                        </form>
+                        <a href="/Home/Index"><input type="button" value="Siteye Dön" class="btn btn-info btn-success" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+

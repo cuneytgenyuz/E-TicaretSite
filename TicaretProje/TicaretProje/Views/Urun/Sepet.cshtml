@@ -1,0 +1,66 @@
+﻿
+@model TicaretProje.App_Classes.Sepet
+
+@*<ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="glyphicon glyphicon-shopping-cart"></span>
+            @if (Model != null)
+            {
+                @Model.toplamTutar.ToString("C2");
+            }else
+            {
+                <span>0 TL</span>
+            }
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-cart" role="menu">
+
+                @if (Model != null)
+                {
+                    foreach (var item in Model.urunler)
+                    {
+                        <li>
+                            <span class="item">
+                                <button class="btn btn-xs btn-danger pull-right">x</button>
+                                <span class="item-left">
+                                    <img src="@item.urun.Resim.sonResim" alt="" />
+                                    <span class="item-info">
+
+                                           <></> <a href="Urun/Detay/@item.urun.urunAdi"></a>span
+
+                                        <span>Tutar: @item.tutar.ToString("C2")</span>
+                                        <span>Adet : @item.adet</span>
+                                    </span>
+                                </span>
+                                <span class="item-right">
+
+                                </span>
+                            </span>
+                        </li>
+                    }
+                }
+
+
+                <li class="divider"></li>
+                <li><a class="text-center" href="/Urun/Sepet">Sepete Git</a></li>
+            </ul>
+        </li>
+    </ul>*@
+
+@*<div class="top_nav_right">
+        <div class="cart box_1">
+            <a href="/Urun/Sepet">
+                <h3>
+                    <div class="total">
+                        <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
+                        <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> ürün)
+
+
+                    </div>
+
+                </h3>
+            </a>
+            <p><a href="/Urun/Sepet" class="simpleCart_empty">Sepet</a></p>
+
+        </div>
+    </div>*@
+

@@ -1,0 +1,109 @@
+﻿
+
+@{
+    ViewBag.Title = "Ürün Detay";
+}
+
+
+@model TicaretProje.Models.Urun
+
+
+
+<script type="text/javascript" src="/Content/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/Content/js/imagezoom.js"></script>
+<script type="text/javascript" src="/Content/js/jquery.flexslider.js"></script>
+
+
+<div class="single">
+    <div class="container">
+        <div class="col-md-6 single-right-left animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
+            <div class="grid images_3_of_2">
+                <div class="flexslider">
+                    <!-- FlexSlider -->
+                    <script type="text/javascript">var jQueryCalis = $.noConflict(true);
+						// Can also be used with $(document).ready()
+							$(window).load(function() {
+								$('.flexslider').flexslider({
+								animation: "slide",
+								controlNav: "thumbnails"
+								});
+							})(jQueryCalis);
+                    </script>
+                    <!-- //FlexSlider-->
+                    <ul class="slides">
+                        @foreach (var item in Model.Resims)
+                        {
+                            <li>
+                                <div class="thumb-image"> <img src="@item.ilkResim" data-imagezoom="true" class="img-responsive"> </div>
+                            </li>
+                        }
+
+
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 single-right-left simpleCart_shelfItem animated wow slideInRight animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;">
+            <h3>@Model.urunAdi</h3>
+            <p><span class="item_price">@Model.satisFiyat TL</span> </p>
+            <div class="rating1">
+
+            </div>
+
+
+
+            <div class="occasion-cart">
+                <a class="item_add hvr-outline-out button2 sepeteAt">Sepete Ekle</a>
+            </div>
+
+        </div>
+        <div class="clearfix"> </div>
+
+        <div class="bootstrap-tab animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
+            <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                <ul id="myTab" class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="/Content//Content/#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Açıklama</a></li>
+
+
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active bootstrap-tab-text" id="home" aria-labelledby="home-tab">
+                        <h5>ÜRÜN KISA AÇIKLAMA</h5>
+                        <p>
+                           @Model.aciklama
+
+                        </p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade bootstrap-tab-text" id="profile" aria-labelledby="profile-tab">
+                        <div class="bootstrap-tab-text-grids">
+                            <div class="bootstrap-tab-text-grid">
+                                <div class="bootstrap-tab-text-grid-left">
+                                    <img src="/Content/images/men3.jpg" alt=" " class="img-responsive">
+                                </div>
+                                <div class="bootstrap-tab-text-grid-right">
+
+                                    <p>
+                                        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+                                        suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
+                                        vel eum iure reprehenderit.
+                                    </p>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade bootstrap-tab-text" id="dropdown1" aria-labelledby="dropdown1-tab">
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade bootstrap-tab-text" id="dropdown2" aria-labelledby="dropdown2-tab">
+                        <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

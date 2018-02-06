@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model IEnumerable<TicaretProje.Models.Kullanici>
+
+<table class="table table-striped table-hover table-bordered" id="editable-sample">
+    <thead>
+        <tr>
+            <th>Adı</th>
+            <th>Soyadı</th>
+            <th>Kullanıcı Adı</th>
+            <th>Şifre</th>
+            <th>Mail</th>
+            <th>Rol</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var kullanici in Model)
+        {
+            <tr class="">
+                <td>@kullanici.adi</td>
+                <td>@kullanici.soyadi</td>
+                <td>@kullanici.kullaniciAdi</td>
+                <td>@kullanici.parola</td>
+                <td>@kullanici.mail</td>
+                <td>@kullanici.Rol.rolAdi</td>
+                
+             </tr>
+        }
+
+
+    </tbody>
+</table>

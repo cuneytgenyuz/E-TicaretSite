@@ -1,0 +1,227 @@
+﻿<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>@ViewBag.title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <link href="/Areas/Admin/Content/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- Custom Theme files -->
+    <link href="/Areas/Admin/Content/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--js-->
+    <script src="/Areas/Admin/Content/js/jquery-2.1.1.min.js"></script>
+    <!--icons-css-->
+    <link href="/Areas/Admin/Content/css/font-awesome.css" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href='//fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    <!--static chart-->
+    <script src="/Areas/Admin/Content/js/Chart.min.js"></script>
+    <!--//charts-->
+    <!-- geo chart -->
+    <script src="/Areas/Admin/Content///cdn.jsdelivr.net/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <script>window.modernizr || document.write('<script src="/Areas/Admin/Content/lib/modernizr/modernizr-custom.js"><\/script>')</script>
+    <!--<script src="/Areas/Admin/Content/lib/html5shiv/html5shiv.js"></script>-->
+    <!-- Chartinator  -->
+    <script src="/Areas/Admin/Content/js/chartinator.js"></script>
+    <script type="text/javascript">
+        jQuery(function ($) {
+
+            var chart3 = $('#geoChart').chartinator({
+                tableSel: '.geoChart',
+
+                columns: [{role: 'tooltip', type: 'string'}],
+
+                colIndexes: [2],
+
+                rows: [
+                    ['China - 2015'],
+                    ['Colombia - 2015'],
+                    ['France - 2015'],
+                    ['Italy - 2015'],
+                    ['Japan - 2015'],
+                    ['Kazakhstan - 2015'],
+                    ['Mexico - 2015'],
+                    ['Poland - 2015'],
+                    ['Russia - 2015'],
+                    ['Spain - 2015'],
+                    ['Tanzania - 2015'],
+                    ['Turkey - 2015']],
+
+                ignoreCol: [2],
+
+                chartType: 'GeoChart',
+
+                chartAspectRatio: 1.5,
+
+                chartZoom: 1.75,
+
+                chartOffset: [-12,0],
+
+                chartOptions: {
+
+                    width: null,
+
+                    backgroundColor: '#fff',
+
+                    datalessRegionColor: '#F5F5F5',
+
+                    region: 'world',
+
+                    resolution: 'countries',
+
+                    legend: 'none',
+
+                    colorAxis: {
+
+                        colors: ['#679CCA', '#337AB7']
+                    },
+                    tooltip: {
+
+                        trigger: 'focus',
+
+                        isHtml: true
+                    }
+                }
+
+
+            });
+        });
+    </script>
+    <!--geo chart-->
+    <!--skycons-icons-->
+    <script src="/Areas/Admin/Content/js/skycons.js"></script>
+    <!--//skycons-icons-->
+</head>
+<body>
+    <div class="page-container">
+        <div class="left-content">
+            <div class="mother-grid-inner">
+                <!--header start here-->
+                <div class="header-main" align="center">
+                    <h2>HOŞGELDİN ADMİN</h2>
+
+                    <div class="logo-name">
+                        <a href="/Admin/AdminHome/Index">
+                            <h1>Shoppy</h1>
+                            <!--<img id="logo" src="" alt="Logo"/>-->
+                        </a>
+                    </div>
+                    <!--notification menu end -->
+                    <div class="profile_details">
+                        <ul>
+                            <li class="dropdown profile_details_drop">
+                                <a href="/Areas/Admin/Content/#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <div class="profile_img">
+                                        <span class="prfil-img"><img src="/Areas/Admin/Content/images/p1.png" alt=""> </span>
+                                        <div class="user-name">
+                                            <p>Admin</p>
+                                            <span>Administrator</span>
+                                        </div>
+                                        <i class="fa fa-angle-down lnr"></i>
+                                        <i class="fa fa-angle-up lnr"></i>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu drp-mnu">
+
+                                    <li> <a href="/Areas/Admin/Content/#"><i class="fa fa-sign-out"></i> Çıkış</a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                        <div class="clearfix"> </div>
+                    
+                    <div class="clearfix"> </div>
+                
+                <!--heder end here-->
+                <!-- script-for sticky-nav -->
+                <script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header-main").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop();
+				if(scrollpos >=navoffeset){
+					$(".header-main").addClass("fixed");
+				}else{
+					$(".header-main").removeClass("fixed");
+				}
+			 });
+
+		});
+                </script>
+                <!-- /script-for sticky-nav -->
+                <!--inner block start here-->
+                <br /><br /><br /><br /><br />
+                
+                   
+                
+                @RenderBody()
+                <!--inner block end here-->
+                <!--copy rights start here-->
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <div class="copyrights">
+                    <p>© 2018 Shoppy. All Rights Reserved | Design by Cüneyt Genyüz </p>
+                </div>
+                <!--COPY rights end here-->
+            </div>
+        </div>
+        <!--slider menu-->
+        
+        <div class="sidebar-menu" >Shoppy
+            <div class="logo" title="Menü">
+                <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="#">
+                    <span id="logo"></span>
+                    <!--<img id="logo" src="/Areas/Admin/Content/" alt="Logo"/>-->
+                </a>
+            </div>
+            <div class="menu">
+                <ul id="menu">
+                    <li id="menu-home"><a href="/Admin/AdminHome/Index"><i class="fa fa-tachometer" title="Anasayfa"></i><span title="Anasayfa">Anasayfa</span></a></li>
+                    <li id="menu-home"><a href="/Admin/AdminUrun/Index"><i class="fa fa-tachometer" title="Ürünler"></i><span title="Ürünler">Ürünler</span></a></li>
+                    <li id="menu-home"><a href="/Admin/AdminKategori/Index"><i class="fa fa-tachometer" title="Kategoriler"></i><span title="Kategoriler">Kategoriler</span></a></li>
+                    <li id="menu-home"><a href="/Admin/AdminKullanici/Index"><i class="fa fa-tachometer" title="Üyeler"></i><span title="Üyeler">Üyeler</span></a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <!--slide bar menu end here-->
+
+    <script>
+var toggle = true;
+
+$(".sidebar-icon").click(function() {
+  if (toggle)
+  {
+    $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+    $("#menu span").css({"position":"absolute"});
+  }
+  else
+  {
+    $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+    setTimeout(function() {
+      $("#menu span").css({"position":"relative"});
+    }, 400);
+  }
+                toggle = !toggle;
+            });
+    </script>
+    <!--scrolling js-->
+    <script src="/Areas/Admin/Content/js/jquery.nicescroll.js"></script>
+    <script src="/Areas/Admin/Content/js/scripts.js"></script>
+    <!--//scrolling js-->
+    <script src="/Areas/Admin/Content/js/bootstrap.js"> </script>
+    <!-- mother grid end here-->
+</body>
+</html>                     
